@@ -1,0 +1,70 @@
+body{
+    background-color: #ccc;
+    color: #000 !important;	
+}
+footer{
+	background-color: #161616;
+	color: #fff;
+}
+.top-nav-collapse {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+}
+.main-title__block{
+    color: #fff;
+}
+.main-title__button{
+    border-color: #fff;
+    color: #fff;
+}
+.main-title__button:hover{
+    background-color: #fff;
+    color: #000;
+}
+.steps{
+	background-color: #161616;
+	color: #fff;
+}
+.steps h4,
+.steps h5{
+	color: #fff;
+}
+.aboutus{
+	background-color: #ccc;
+}
+.portolio{
+	background-color: #fff;
+}
+.contacts{
+	background-color: #c3c3c3;
+}
+.step__icon{
+	border-color: #fff;
+	background-color: #fff;
+	color: #000;
+}
+.contacts__input{
+    background-color: #fff !important;
+}
+.contacts-button{
+	background-color: #3f51b5;
+	color: #fff;
+}
+.md-overlay {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+.md-content{
+	background-color: #00695C;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(38, 166, 154, 0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(255,0,0,0.4); 
+}
+.navbar .navbar-toggle {
+    border-color: transparent;
+    color: #fff;
+}
+.home__button_transparent{
+	background-color: transparent !important;
+}

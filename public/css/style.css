@@ -1,0 +1,127 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    /*padding-top: 80px;*/
+    position: relative;
+}
+footer{    
+    padding: 5px;
+}
+.home{
+    height: 100vh;
+}
+.section{
+    /*height: 600px;*/
+    position: relative;
+}
+.home__container{
+    height: 100%;
+}
+.main-title__block{
+    position: relative;
+    top: calc( 50% - 100px );
+}
+.bold_text{
+    font-family: 'Roboto bold', sans-serif;
+}
+.main-title__button{
+    border: 3px solid;
+    padding: 10px 20px;
+    font-size: 24px;
+    -webkit-transition: all 0.3s;
+     -moz-transition: all 0.3s;
+     -o-transition: all 0.3s;
+     transition: all 0.3s;
+}
+.main-title__button:hover{
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
+}
+section h4{
+    margin: 0px 0 20px 0;
+}
+section h5{
+    margin: 0px 0 20px 0;
+}
+section{
+    border: 1px solid transparent;
+}
+section .container{
+    padding: 50px 0;
+}
+.step__icon{
+    width: 100%;
+    padding: 20% 30%;
+    border: 1px solid;
+    font-size: 30px;    
+}
+.aboutus img{
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+.portolio__block{
+    padding-top: 10%;
+}
+.portolio__block:hover{
+    cursor: pointer;
+}
+.portolio-row{
+    margin-top: 20px;
+}
+.dialog__img{
+    width: 60%;
+}
+.contacts__input::-webkit-input-placeholder {
+    padding-left: 20px;
+}
+.contacts__input::-moz-placeholder{
+    padding-left: 20px;
+}/* Firefox 19+ */
+.contacts__input:-moz-placeholder{
+    padding-left: 20px;
+}/* Firefox 18- */
+.contacts__input:-ms-input-placeholder{
+    padding-left: 20px;
+}
+.contacts-button{
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+    border-radius: 50%;
+    padding: 20px;
+}
+.contacts-button:hover{
+    cursor: pointer;
+}
+.project-modal{
+    width: 80%;
+    max-width: 80%;
+    height: 90%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.project-modal__img{
+    width: 100%;
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+} 
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+.steps__row{
+    margin-top: 20px;
+}
+.steps_arrow{
+    padding-top: calc( 50% - 80px );
+}
+.modal-close__button{
+    display: none !important;
+}

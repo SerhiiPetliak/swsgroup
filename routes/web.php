@@ -10,7 +10,6 @@
 | to using a Closure or controller method. Build something great!
 |
 */
+use App\Http\Controllers\SiteController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', ['uses' => 'SiteController@index', 'as' => 'site.index']);
