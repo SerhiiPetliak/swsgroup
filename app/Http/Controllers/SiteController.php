@@ -20,7 +20,7 @@ class SiteController extends Controller
 
     public function sendContact(Request $request)
     {
-        $user = auth()->user();
+        $user = User::find(1);
         $data = [];
         $data['name'] = $request->get('name');
         $data['email'] = $request->get('email');

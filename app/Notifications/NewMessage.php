@@ -45,6 +45,8 @@ class NewMessage extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
+                    ->greeting('Внимание!')
+                    ->subject('Новый клиент')
                     ->line('С нами хотят связаться!')
                     ->line('Имя: '.$this->name)
                     ->line('E-mail: '.$this->email)
