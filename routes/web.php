@@ -13,3 +13,7 @@
 use App\Http\Controllers\SiteController;
 
 Route::get('/', ['uses' => 'SiteController@index', 'as' => 'site.index']);
+Route::post('/', ['uses' => 'SiteController@sendContact', 'as' => 'site.send.contact']);
+
+Auth::routes();
+Route::get('/home', 'HomeController@index');

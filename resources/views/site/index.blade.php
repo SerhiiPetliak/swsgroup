@@ -187,10 +187,11 @@
         <h3 class="bold_text">Форма связи</h3>
         <div>
             <p class="text-center">Оставьте свои контактные данные и мы обязательно свяжемся с Вами</p>
-            <form action="">
-                <input type="text" class="contacts__input" placeholder="&nbsp;Ваше имя">
-                <input type="text" class="contacts__input" placeholder="&nbsp;Телефон">
-                <input type="email" class="contacts__input" placeholder="&nbsp;E-mail">
+            <form action="" method="post">
+                {{ csrf_field() }}
+                <input type="text" name="name" class="contacts__input" placeholder="&nbsp;Ваше имя">
+                <input type="text" name="phone" class="contacts__input" placeholder="&nbsp;Телефон">
+                <input type="email" name="email" class="contacts__input" placeholder="&nbsp;E-mail">
                 <input type="submit" class="btn btn-success md-close" value="Отправить">
             </form>
         </div>
