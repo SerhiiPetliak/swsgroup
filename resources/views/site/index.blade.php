@@ -7,7 +7,7 @@
         <div class="row main-title__block">
             <div class="col-md-12 text-center">
                 <h2 class="main-title__text bold_text">At vero eos et accusamus et iusto odio </h2>
-                <a href="" class="main-title__button">Button</a>
+                <a href="#aboutus" class="main-title__button nav-link ancLinks">О нас</a>
             </div>
         </div>
     </div>
@@ -16,6 +16,7 @@
         <a href="#steps" class="ancLinks"><span></span></a>
     </section>
     <!--/.Arrow block -->
+    <div class="clearfix"></div>
 </section>
 <!--/.Home block-->
 
@@ -26,49 +27,48 @@
 
         <div class="col-md-2">
             <i class="fa fa-comments-o fa-5x" aria-hidden="true"></i>
-            <h5>Discuss</h5>
+            <h5>Дисскуссия</h5>
         </div>
         <div class="col-md-2">
             <i class="fa fa-cogs fa-5x" aria-hidden="true"></i>
-            <h5>Research</h5>
+            <h5>Исследование</h5>
         </div>
         <div class="col-md-2">
             <i class="fa fa-map-o fa-5x" aria-hidden="true"></i>
-            <h5>Plan</h5>
+            <h5>Планирование</h5>
         </div>
         <div class="col-md-2">
             <i class="fa fa-terminal fa-5x" aria-hidden="true"></i>
-            <h5>Execute</h5>
+            <h5>Разработка</h5>
         </div>
         <div class="col-md-2">
             <i class="fa fa-sitemap fa-5x" aria-hidden="true"></i>
-            <h5>Test</h5>
+            <h5>Тестирование</h5>
         </div>
         <div class="col-md-2">
             <i class="fa fa-check fa-5x" aria-hidden="true"></i>
-            <h5>Launch</h5>
+            <h5>Запуск</h5>
         </div>
     </div>
 </section>
 
 <section class="section aboutus" id="aboutus" data-name="aboutus">
     <div class="container">
-        <h4 class="text-center bold_text">About us</h4>
+        <h4 class="text-center bold_text">О нас</h4>
         <div class="row">
-            <div class="col-md-4 text-center">
-                <img src="img/bg.jpg" alt="" class="img-responsive">
-                <h5 class="bold_text">Title</h5>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto </p>
+            <div class="col-md-6 text-center">
+                <img src="img/user.jpg" alt="" class="img-circle img__border">
+                <h5 class="bold_text">Сергей Мова</h5>
+                <p>
+                    Developer
+                </p>
             </div>
-            <div class="col-md-4 text-center">
-                <img src="img/bg.jpg" alt="" class="img-responsive">
-                <h5 class="bold_text">Title</h5>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto </p>
-            </div>
-            <div class="col-md-4 text-center">
-                <img src="img/bg.jpg" alt="" class="img-responsive">
-                <h5 class="bold_text">Title</h5>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto </p>
+            <div class="col-md-6 text-center">
+                <img src="img/user.jpg" alt="" class="img-circle img__border">
+                <h5 class="bold_text">Сергей Петляк</h5>
+                <p>
+                    Developer
+                </p>
             </div>
         </div>
     </div>
@@ -76,7 +76,7 @@
 
 <section class="section portolio" id="portolio" data-name="portolio">
     <div class="container">
-        <h4 class="text-center bold_text">Portfolio</h4>
+        <h4 class="text-center bold_text">Портфолио</h4>
         <div class="row">
             <div class="col-md-4 text-center">
                 <div class="view overlay hm-black-strong">
@@ -146,7 +146,7 @@
 
 <section class="section contacts" id="contacts" data-name="contacts">
     <div class="container text-center">
-        <h4 class="bold_text">Contacts</h4>
+        <h4 class="bold_text">Контакты</h4>
         <div class="row">
             <div class="col-md-4">
                 <i class="fa fa-map-marker fa-2x"></i><br>
