@@ -10,11 +10,11 @@
             <a class="navbar-brand bold_text" href="#">Simple Way Solutions</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar_position">
-                <li><a href="#home" class="nav-link waves-effect waves-light ancLinks bold_text home__button_transparent">Главная <span class="sr-only">(current)</span></a></li>
-                <li><a href="#aboutus" class="nav-link waves-effect waves-light ancLinks bold_text">О нас</a></li>
-                <li><a href="#portolio" class="nav-link waves-effect waves-light ancLinks bold_text">Портфолио</a></li>
-                <li><a href="#contacts" class="nav-linkwaves-effect waves-light ancLinks bold_text">Контакты</a></li>
+            <ul class="nav navbar-nav navbar_position navbar_text">
+                <li><a href="#home" class="nav-link waves-effect waves-light ancLinks bold_text home__button_transparent">Home <span class="sr-only">(current)</span></a></li>
+                <li><a href="#aboutus" class="nav-link waves-effect waves-light ancLinks bold_text">Team</a></li>
+                <li><a href="#portolio" class="nav-link waves-effect waves-light ancLinks bold_text">Portfolio</a></li>
+                <li><a href="#contacts" class="nav-link waves-effect waves-light ancLinks bold_text">Contacts</a></li>
             </ul>
         </div><!-- /.nav-collapse -->
     </div><!-- /.container -->

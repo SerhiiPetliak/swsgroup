@@ -24,8 +24,10 @@ footer{
     font-family: 'Roboto bold', sans-serif;
 }
 .main-title__button{
+    display: inline-block;
     border: 3px solid;
     padding: 10px 20px;
+    margin-top: 25px;
     font-size: 24px;
     -webkit-transition: all 0.3s;
      -moz-transition: all 0.3s;
@@ -37,6 +39,9 @@ footer{
     background-color: #fff;
     color: #000;
 }
+section h2{
+    margin: 0px 0 25px 0;
+}
 section h4{
     margin: 0px 0 25px 0;
     text-transform: uppercase;
@@ -45,7 +50,7 @@ section h5{
     margin: 0px 0 25px 0;
 }
 section .container{
-    padding: 50px 0;
+    padding: 40px 0;
 }
 .step__icon{
     width: 100%;
@@ -86,8 +91,8 @@ section p{
 }
 .contacts-button{
     position: fixed;
-    bottom: 60px;
-    right: 60px;
+    bottom: 40px;
+    right: 40px;
     border-radius: 50%;
     padding: 20px;
 }
@@ -131,4 +136,17 @@ section p{
 }
 .img__border{
     border: 5px solid;
+}
+.navbar_text{
+    text-transform: uppercase;
+}
+.nav-link{
+    font-size: 18px !important;
+}
+.contacts__text_margin{
+    margin-right: 10px;
+}
+.sections__title{
+    text-transform: uppercase;
+    font-size: 20px;
 }

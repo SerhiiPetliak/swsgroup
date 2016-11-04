@@ -78,3 +78,6 @@ footer{
 .img__border{
 	border-color: #fff;
 }
+.send__button_color{
+    background-color: #00810A !important;
+}
