@@ -12,6 +12,11 @@
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
+    <link href="{{ asset("css/colors.css") }}" rel="stylesheet">
+    <script
+            src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous"></script>
 
     <!-- Scripts -->
     <script>
@@ -20,7 +25,7 @@
         ]); ?>
     </script>
 </head>
-<body>
+<body class="admin_bg">
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
@@ -80,7 +85,7 @@
 
         @yield('content')
     </div>
-
+    @yield('js')
     <!-- Scripts -->
     <script src="/js/app.js"></script>
 </body>

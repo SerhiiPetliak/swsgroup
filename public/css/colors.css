@@ -69,3 +69,9 @@ footer{
 .home__button_transparent{
 	background-color: transparent !important;
 }
+.notread{
+	background-color: #ADADAD;
+}
+.admin_bg{
+	background-color: #fff;
+}
