@@ -14,8 +14,8 @@ use App\Http\Controllers\SiteController;
 
 Route::get('/', ['uses' => 'SiteController@index', 'as' => 'site.index']);
 Route::post('/', ['uses' => 'SiteController@sendContact', 'as' => 'site.send.contact']);
-Route::get('/notifishow', ['uses' => 'SiteController@notificationsShow', 'as' => 'site.notifishow']);
-Route::post('/notifishow', ['uses' => 'SiteController@events_read', 'as' => 'site.notifishow']);
+Route::get('/notifishow', ['uses' => 'HomeController@notificationsShow', 'as' => 'notifishow']);
+Route::post('/notifishow', ['uses' => 'HomeController@events_read', 'as' => 'notifishow']);
 
 Auth::routes();
 Route::get('/home', 'HomeController@index');

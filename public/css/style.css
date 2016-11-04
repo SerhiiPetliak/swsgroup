@@ -125,3 +125,6 @@ section .container{
 .modal-close__button{
     display: none !important;
 }
+.contacts__input{
+    padding-left: 5px !important;
+}

@@ -187,13 +187,17 @@
         <h3 class="bold_text">Форма связи</h3>
         <div>
             <p class="text-center">Оставьте свои контактные данные и мы обязательно свяжемся с Вами</p>
-            <form action="" method="post">
-                {{ csrf_field() }}
-                <input type="text" name="name" class="contacts__input" placeholder="&nbsp;Ваше имя">
-                <input type="text" name="phone" class="contacts__input" placeholder="&nbsp;Телефон">
-                <input type="email" name="email" class="contacts__input" placeholder="&nbsp;E-mail">
-                <input type="submit" class="btn btn-success md-close" value="Отправить">
-            </form>
+            <div class="preload__form text-center">
+                <form action="" class="contacts__form" method="post">
+                    {{ csrf_field() }}
+                    <input type="text" name="name" class="contacts__input" placeholder="&nbsp;Ваше имя">
+                    <input type="text" name="phone" class="contacts__input" placeholder="&nbsp;Телефон">
+                    <input type="email" name="email" class="contacts__input" placeholder="&nbsp;E-mail">
+                    <input type="submit" class="btn btn-success contacts_send" value="Отправить">
+                    <button class="md-close modal-close__button"></button>
+                </form>
+            </div>
+
         </div>
     </div>
 </div>
@@ -213,6 +217,25 @@
             setInterval(function () {
                 $(".contacts-button").prop("style", "visibility: visible; animation-duration: 500ms; animation-iteration-count: infinite; animation-name: shake;");
             }, 13000);      //Запускаем анимацию кнопки конактов
+
+            $(".contacts_send").on('click', function(e){
+               e.preventDefault();
+                $.ajax({
+                    type: "POST",
+                    url: "{{ route('site.index') }}",
+                    data: $(".contacts__form").serialize(),
+                    beforeSend: function() {
+                        $(".preload__form").html("<img src='{{ asset("img/preloader.gif") }}' >");
+                    },
+                    success: function(response) {
+                        if(response == 1){
+                            $(".preload__form").html("<p>Мы получили Ваше сообщение и скоро с Вами свяжемся!</p>");
+                        }else{
+                            $(".preload__form").html("<p>К сожалению возникла ошибка! Пожалуйста попробуйте написать нам позже.</p>");
+                        }
+                    }
+                });
+            });
         });
     </script>
 @stop
