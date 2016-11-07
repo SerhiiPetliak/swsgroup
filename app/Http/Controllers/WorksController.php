@@ -57,12 +57,13 @@ class WorksController extends Controller
 
         if ($request->hasFile('preview_img')) {
             $filename = uniqid('user', true) . '.' . $request->file('preview_img')->getClientOriginalExtension();
-            $request->file('preview_img')->storeAs('works_img', $filename);
+            //$request->file('preview_img')->storeAs('works_img', $filename);
+            $request->file('preview_img')->move(public_path("/img"), $filename);
             $work->preview_img = $filename;
         }
         if ($request->hasFile('img')) {
             $filename = uniqid('user', true) . '.' . $request->file('img')->getClientOriginalExtension();
-            $request->file('preview_img')->storeAs('works_img', $filename);
+            $request->file('img')->move(public_path("/img"), $filename);
             $work->img = $filename;
         }
 

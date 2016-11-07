@@ -83,7 +83,7 @@
             @endif
                 <div class="col-md-4 text-center">
                     <div class="view overlay hm-black-strong portfolio__block" data-id="{{ $item->id }}">
-                        <img src="img/bg.jpg" class="img-responsive" alt="">
+                        <img src="img/{{ $item->preview_img }}" class="img-responsive" alt="">
                         <div class="mask flex-center portolio__block md-trigger" data-modal="modal-1">
                             <h5 class="white-text bold_text">{{ $item->title }}</h5>
                             <i class="fa fa-eye fa-5x white-text" aria-hidden="true"></i>
@@ -147,7 +147,6 @@
     </div>
 </div>
 <!-- Modal -->
-<div class="hidden storage__path" data-path="{{ config('portfolio.path') }}"></div>
 <div class="md-overlay"></div><!-- the overlay element -->
 @stop
 
@@ -184,8 +183,7 @@
             });
 
             $(".portfolio__block").on("click",function(){
-               var work_id = $(this).data('id'),
-                       mpath = $(".storage__path").data('path');
+               var work_id = $(this).data('id');
 
                 $.ajax({
                     type: "get",
@@ -195,7 +193,8 @@
                     },
                     success: function(response) {
                         $(".portfolio-modal__title").text(response.title);
-                        $(".portfolio-modal__body").html("<p>"+response.description+"</p><img src='"+mpath+response.img+"'>");
+                        //$(".portfolio-modal__body").html("<p>"+response.description+"</p><img src='"+mpath+response.img+"'>");
+                        $(".portfolio-modal__body").html("<p>"+response.description+"</p><img src='img/"+response.img+"'>");
                     }
                 });
             });
