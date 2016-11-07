@@ -109,6 +109,19 @@ class WorksController extends Controller
     {
         $work = Works::whereId($id)->first();
         $work->fill($request->all());
+
+        if ($request->hasFile('preview_img')) {
+            $filename = uniqid('user', true) . '.' . $request->file('preview_img')->getClientOriginalExtension();
+            //$request->file('preview_img')->storeAs('works_img', $filename);
+            $request->file('preview_img')->move(public_path("/img"), $filename);
+            $work->preview_img = $filename;
+        }
+        if ($request->hasFile('img')) {
+            $filename2 = uniqid('user', true) . '.' . $request->file('img')->getClientOriginalExtension();
+            $request->file('img')->move(public_path("/img"), $filename2);
+            $work->img = $filename2;
+        }
+
         $work->save();
         return redirect()->route('works.index');
     }
