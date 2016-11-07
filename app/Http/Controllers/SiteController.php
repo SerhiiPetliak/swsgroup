@@ -16,7 +16,7 @@ class SiteController extends Controller
      */
     public function index()
     {
-        $works = DB::table('works')->skip(config('portfolio.skip'))->take(config('portfolio.get'))->get();
+        $works = DB::table('works')->orderBy('id', 'desc')->skip(config('portfolio.skip'))->take(config('portfolio.get'))->get();
         return view('site.index')->with([
            'works' => $works
         ]);

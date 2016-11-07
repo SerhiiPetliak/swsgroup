@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'skip' => 3,
+    'skip' => 0,
     'get' => 6,
 ];

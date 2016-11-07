@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Works;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class WorksController extends Controller
 {
@@ -15,7 +16,7 @@ class WorksController extends Controller
      */
     public function index()
     {
-        $works = Works::all();
+        $works = DB::table('works')->orderBy('id', 'desc')->get();
 
         return view('works.index')->with([
             'data' => $works
