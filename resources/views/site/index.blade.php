@@ -54,7 +54,6 @@
 <section class="section aboutus" id="aboutus" data-name="aboutus">
     <div class="container">
         <h4 class="text-center bold_text">Team</h4>
-        <div class="row">
             <div class="col-md-offset-2 col-md-3 text-center">
                 <img src="img/user.jpg" alt="" class="img-circle img__border">
                 <h5 class="bold_text">Сергей Мова</h5>
@@ -63,20 +62,19 @@
                 </p>
             </div>
             <div class="col-md-offset-2 col-md-3 text-center">
-                <img src="img/user.jpg" alt="" class="img-circle img__border">
+                <img src="img/petlyak.jpg" alt="" class="img-circle img__border">
                 <h5 class="bold_text">Сергей Петляк</h5>
                 <p>
                     Developer
                 </p>
             </div>
-        </div>
     </div>
 </section>
 
 <section class="section portolio" id="portolio" data-name="portolio">
     <div class="container">
         <h4 class="text-center bold_text">Portfolio</h4>
-        <div class="row">
+        <div class="">
             <div class="col-md-4 text-center">
                 <div class="view overlay hm-black-strong">
                     <img src="img/bg.jpg" class="img-responsive" alt="">
@@ -108,7 +106,7 @@
                 </div>
             </div>
         </div>
-        <div class="row portolio-row">
+        <div class="portolio-row">
             <div class="col-md-4 text-center">
                 <div class="view overlay hm-black-strong">
                     <img src="img/bg.jpg" class="img-responsive " alt="">
@@ -145,14 +143,12 @@
 
 <section class="section contacts" id="contacts" data-name="contacts">
     <div class="container text-center">
-        <div class="row">
             <div class="col-md-offset-2 col-md-3 text-center">
                 <p><i class="fa fa-skype contacts__text_margin" aria-hidden="true"></i>skype</p>
             </div>
             <div class="col-md-offset-2 col-md-3 text-center">
                 <p><i class="fa fa-envelope-o contacts__text_margin" aria-hidden="true"></i>example@gmail.com</p>
             </div>
-        </div>
     </div>
 
 </section>
