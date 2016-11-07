@@ -17,5 +17,12 @@ Route::post('/', ['uses' => 'SiteController@sendContact', 'as' => 'site.send.con
 Route::get('/notifishow', ['uses' => 'HomeController@notificationsShow', 'as' => 'notifishow']);
 Route::post('/notifishow', ['uses' => 'HomeController@events_read', 'as' => 'notifishow']);
 
+Route::get('/works', ['uses' => 'WorksController@index', 'as' => 'works.index']);
+Route::get('/works-create', ['uses' => 'WorksController@create', 'as' => 'works.create']);
+Route::post('/works-create', ['uses' => 'WorksController@store', 'as' => 'works.store']);
+Route::get('/works-edit/{id}', ['uses' => 'WorksController@edit', 'as' => 'works.edit']);
+Route::post('/works-edit/{id}', ['uses' => 'WorksController@update', 'as' => 'works.update']);
+Route::get('/works-destroy/{id}', ['uses' => 'WorksController@destroy', 'as' => 'works.destroy']);
+
 Auth::routes();
 Route::get('/home', 'HomeController@index');
