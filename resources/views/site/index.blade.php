@@ -56,14 +56,14 @@
         <h4 class="text-center bold_text">Team</h4>
             <div class="col-md-offset-2 col-md-3 text-center">
                 <img src="img/user.jpg" alt="" class="img-circle img__border">
-                <h5 class="bold_text">Сергей Мова</h5>
+                <h5 class="bold_text">Sergey Mova</h5>
                 <p>
                     Developer
                 </p>
             </div>
             <div class="col-md-offset-2 col-md-3 text-center">
                 <img src="img/petlyak.jpg" alt="" class="img-circle img__border">
-                <h5 class="bold_text">Сергей Петляк</h5>
+                <h5 class="bold_text">Sergey Petlyak</h5>
                 <p>
                     Developer
                 </p>
@@ -105,6 +105,7 @@
                     </div>
                 </div>
             </div>
+            <div class="clearfix"></div>
         </div>
         <div class="portolio-row">
             <div class="col-md-4 text-center">
@@ -137,6 +138,7 @@
                     </div>
                 </div>
             </div>
+            <div class="clearfix"></div>
         </div>
     </div>
 </section>
