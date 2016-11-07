@@ -74,72 +74,27 @@
 <section class="section portolio" id="portolio" data-name="portolio">
     <div class="container">
         <h4 class="text-center bold_text">Portfolio</h4>
-        <div class="">
-            <div class="col-md-4 text-center">
-                <div class="view overlay hm-black-strong">
-                    <img src="img/bg.jpg" class="img-responsive" alt="">
-                    <div class="mask flex-center portolio__block md-trigger" data-modal="modal-1">
-                        <h5 class="white-text bold_text">Title</h5>
-                        <i class="fa fa-eye fa-5x white-text" aria-hidden="true"></i>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 text-center">
-                <div class="view overlay hm-black-strong">
-                    <img src="img/bg.jpg" class="img-responsive " alt="">
-                    <div class="mask flex-center portolio__block md-trigger" data-modal="modal-1">
-                        <h5 class="white-text bold_text">Title</h5>
-                        <i class="fa fa-eye fa-5x white-text" aria-hidden="true"></i>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 text-center">
-                <div class="view overlay hm-black-strong">
-                    <img src="img/bg.jpg" class="img-responsive " alt="">
-                    <div class="mask flex-center portolio__block md-trigger" data-modal="modal-1">
-                        <h5 class="white-text bold_text">Title</h5>
-                        <i class="fa fa-eye fa-5x white-text" aria-hidden="true"></i>
-
-                    </div>
-                </div>
-            </div>
-            <div class="clearfix"></div>
+        <div>
+        @foreach($works as $item)
+            @if($loop->iteration == 4)
+                <div class="clearfix"></div>
         </div>
-        <div class="portolio-row">
-            <div class="col-md-4 text-center">
-                <div class="view overlay hm-black-strong">
-                    <img src="img/bg.jpg" class="img-responsive " alt="">
-                    <div class="mask flex-center portolio__block md-trigger" data-modal="modal-1">
-                        <h5 class="white-text bold_text">Title</h5>
-                        <i class="fa fa-eye fa-5x white-text" aria-hidden="true"></i>
-
+                <div class="portfolio-row">
+            @endif
+                <div class="col-md-4 text-center">
+                    <div class="view overlay hm-black-strong portfolio__block" data-id="{{ $item->id }}">
+                        <img src="img/bg.jpg" class="img-responsive" alt="">
+                        <div class="mask flex-center portolio__block md-trigger" data-modal="modal-1">
+                            <h5 class="white-text bold_text">{{ $item->title }}</h5>
+                            <i class="fa fa-eye fa-5x white-text" aria-hidden="true"></i>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4 text-center">
-                <div class="view overlay hm-black-strong">
-                    <img src="img/bg.jpg" class="img-responsive " alt="">
-                    <div class="mask flex-center portolio__block md-trigger" data-modal="modal-1">
-                        <h5 class="white-text bold_text">Title</h5>
-                        <i class="fa fa-eye fa-5x white-text" aria-hidden="true"></i>
-
-                    </div>
+            @if($loop->iteration == 6)
+                <div class="clearfix"></div>
                 </div>
-            </div>
-            <div class="col-md-4 text-center">
-                <div class="view overlay hm-black-strong">
-                    <img src="img/bg.jpg" class="img-responsive " alt="">
-                    <div class="mask flex-center portolio__block md-trigger" data-modal="modal-1">
-                        <h5 class="white-text bold_text">Title</h5>
-                        <i class="fa fa-eye fa-5x white-text" aria-hidden="true"></i>
-
-                    </div>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
+            @endif
+        @endforeach
     </div>
 </section>
 
@@ -163,8 +118,8 @@
 <!--Main part-->
 <div class="md-modal md-effect-1 project-modal" id="modal-1">
     <div class="md-content">
-        <h3 class="bold_text">title</h3>
-        <div>
+        <h3 class="bold_text portfolio-modal__title"></h3>
+        <div class="text-center portfolio-modal__body">
             <p>This is a modal window. You can do the following things with it:</p>
             <img src="img/snap.jpg" alt="" class="project-modal__img">
             <button class="md-close modal-close__button">cl</button>
@@ -192,6 +147,7 @@
     </div>
 </div>
 <!-- Modal -->
+<div class="hidden storage__path" data-path="{{ config('portfolio.path') }}"></div>
 <div class="md-overlay"></div><!-- the overlay element -->
 @stop
 
@@ -223,6 +179,23 @@
                         }else{
                             $(".preload__form").html("<p>К сожалению возникла ошибка! Пожалуйста попробуйте написать нам позже.</p>");
                         }
+                    }
+                });
+            });
+
+            $(".portfolio__block").on("click",function(){
+               var work_id = $(this).data('id'),
+                       mpath = $(".storage__path").data('path');
+
+                $.ajax({
+                    type: "get",
+                    url: "works-get-work/"+work_id,
+                    beforeSend: function() {
+                        $(".portfolio-modal__body").html("<img src='{{ asset("img/preloader.gif") }}' >");
+                    },
+                    success: function(response) {
+                        $(".portfolio-modal__title").text(response.title);
+                        $(".portfolio-modal__body").html("<p>"+response.description+"</p><img src='"+mpath+response.img+"'>");
                     }
                 });
             });

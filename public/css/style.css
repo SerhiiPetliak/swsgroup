@@ -71,7 +71,7 @@ section p{
 .portolio__block:hover{
     cursor: pointer;
 }
-.portolio-row{
+.portfolio-row{
     margin-top: 20px;
 }
 .dialog__img{
@@ -102,7 +102,7 @@ section p{
 .project-modal{
     width: 80%;
     max-width: 80%;
-    height: 90%;
+    max-height: 90%;
     overflow-y: auto;
     overflow-x: hidden;
 }

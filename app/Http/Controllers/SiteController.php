@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Notifications\NewMessage;
 use App\User;
+use Illuminate\Support\Facades\DB;
 
 class SiteController extends Controller
 {
@@ -15,7 +16,10 @@ class SiteController extends Controller
      */
     public function index()
     {
-        return view('site.index');
+        $works = DB::table('works')->skip(config('portfolio.skip'))->take(config('portfolio.get'))->get();
+        return view('site.index')->with([
+           'works' => $works
+        ]);
     }
 
     public function sendContact(Request $request)

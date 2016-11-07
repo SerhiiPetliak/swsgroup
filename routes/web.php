@@ -18,6 +18,7 @@ Route::get('/notifishow', ['uses' => 'HomeController@notificationsShow', 'as' =>
 Route::post('/notifishow', ['uses' => 'HomeController@events_read', 'as' => 'notifishow']);
 
 Route::get('/works', ['uses' => 'WorksController@index', 'as' => 'works.index']);
+Route::get('/works-get-work/{id}', ['uses' => 'WorksController@getWork', 'as' => 'works.get.work']);
 Route::get('/works-create', ['uses' => 'WorksController@create', 'as' => 'works.create']);
 Route::post('/works-create', ['uses' => 'WorksController@store', 'as' => 'works.store']);
 Route::get('/works-edit/{id}', ['uses' => 'WorksController@edit', 'as' => 'works.edit']);

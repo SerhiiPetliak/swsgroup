@@ -1,7 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: petly
- * Date: 07.11.2016
- * Time: 16:29
- */
+
+return [
+    'skip' => 0,
+    'get' => 6,
+    'path' => 'D:/wamp64/www/swsgroup/swsgroup/storage/app/works_img/',
+];

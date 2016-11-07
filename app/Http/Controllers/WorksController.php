@@ -31,6 +31,17 @@ class WorksController extends Controller
        ]);
     }
 
+    public function getWork($id)
+    {
+        $work = Works::whereId($id)->first();
+
+        $data['title'] = $work->title;
+        $data['description'] = $work->description;
+        $data['img'] = $work->img;
+
+        return $data;
+    }
+
     /**
      * Show the form for creating a new resource.
      *
