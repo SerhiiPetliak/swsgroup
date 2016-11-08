@@ -45,6 +45,12 @@ class WorksSeeder extends Seeder
                 'preview_img' => 'user5822109d207eb3.48516835.jpg',
                 'img' => 'user5821e8076afbc8.57259228.jpg'
             ],
+            [
+                'title'      => 'T.Group',
+                'description' => 'Описание',
+                'preview_img' => 'user5822350550bf62.62455464.jpg',
+                'img' => 'user5822357dc53320.77144973.jpg'
+            ],
         ]);
     }
 }
