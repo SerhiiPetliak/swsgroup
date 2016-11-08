@@ -11,7 +11,6 @@ class Works extends Model
     public $fillable = [
         'title',
         'description',
-        'preview_img',
         'img',
     ];
 }

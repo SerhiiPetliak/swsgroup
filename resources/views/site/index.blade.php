@@ -194,7 +194,7 @@
                     success: function(response) {
                         $(".portfolio-modal__title").text(response.title);
                         //$(".portfolio-modal__body").html("<p>"+response.description+"</p><img src='"+mpath+response.img+"'>");
-                        $(".portfolio-modal__body").html("<p>"+response.description+"</p><img src='img/"+response.img+"'>");
+                        $(".portfolio-modal__body").html("<p>"+response.description+"</p><img src='img/"+response.img+"'  alt='' class='project-modal__img'>");
                     }
                 });
             });
