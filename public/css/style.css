@@ -68,6 +68,9 @@ section p{
 .portolio__block{
     padding-top: 10%;
 }
+.portfolio__wrap{
+    border: 5px solid;
+}
 .portolio__block:hover{
     cursor: pointer;
 }

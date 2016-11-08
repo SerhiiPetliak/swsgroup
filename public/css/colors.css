@@ -81,3 +81,6 @@ footer{
 .send__button_color{
     background-color: #00810A !important;
 }
+.portfolio__wrap{
+	border-color: #ccc;;
+}

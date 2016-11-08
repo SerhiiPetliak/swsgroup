@@ -81,8 +81,8 @@
         </div>
                 <div class="portfolio-row">
             @endif
-                <div class="col-md-4 text-center">
-                    <div class="view overlay hm-black-strong portfolio__block" data-id="{{ $item->id }}">
+                <div class="col-md-4 text-center ">
+                    <div class="view overlay hm-black-strong portfolio__block portfolio__wrap" data-id="{{ $item->id }}">
                         <img src="img/{{ $item->preview_img }}" class="img-responsive" alt="">
                         <div class="mask flex-center portolio__block md-trigger" data-modal="modal-1">
                             <h5 class="white-text bold_text">{{ $item->title }}</h5>

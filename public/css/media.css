@@ -39,29 +39,42 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-	s
+	.portfolio__wrap{
+		margin-bottom: 20px;
+	}
 }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {
-	
+	.portfolio__wrap{
+		margin-bottom: 20px;
+	}
 }
 @media only screen and (max-width: 768px) {
     .navbar {
          background-color: #3F729B !important;
     }
+	.portfolio__wrap{
+		margin-bottom: 20px;
+	}
 }
 
 /*==========  Mobile First Method  ==========*/
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px) {
-	
+
+	.portfolio__wrap{
+		margin-bottom: 20px;
+	}
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px) {
-	
+
+	.portfolio__wrap{
+		margin-bottom: 20px;
+	}
 }
 
 /* Small Devices, Tablets */
@@ -69,6 +82,9 @@
 	
 	.navbar_position{
 		float: right !important;
+	}
+	.portfolio__wrap{
+		margin-bottom: 20px;
 	}
 }
 
@@ -79,6 +95,9 @@
 	}
 	.navbar_position{
 		float: right !important;
+	}
+	.portfolio__wrap{
+		margin-bottom: 0px;
 	}
 }
 
@@ -91,6 +110,9 @@
 	.navbar_position{
 		float: right !important;
 	}
+	.portfolio__wrap{
+		margin-bottom: 0px;
+	}
 }
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1600px) {
@@ -100,5 +122,8 @@
 	}
 	.navbar_position{
 		float: right !important;
+	}
+	.portfolio__wrap{
+		margin-bottom: 0px;
 	}
 }
