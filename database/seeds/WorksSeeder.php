@@ -42,7 +42,7 @@ class WorksSeeder extends Seeder
             [
                 'title'      => 'SutkiHouse',
                 'description' => 'Описание',
-                'preview_img' => 'user5821f6c4589311.04199017.jpg',
+                'preview_img' => 'user5822109d207eb3.48516835.jpg',
                 'img' => 'user5821e8076afbc8.57259228.jpg'
             ],
         ]);
