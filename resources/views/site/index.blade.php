@@ -85,7 +85,7 @@
                     <div class="view overlay hm-black-strong portfolio__block portfolio__wrap" data-id="{{ $item->id }}">
                         <img src="img/{{ $item->preview_img }}" class="img-responsive" alt="">
                         <div class="mask flex-center portolio__block md-trigger" data-modal="modal-1">
-                            <h5 class="white-text bold_text">{{ $item->title }}</h5>
+                            <h5 class="white-text bold_text portolio__block_title">{{ $item->title }}</h5>
                             <i class="fa fa-eye fa-5x white-text" aria-hidden="true"></i>
                         </div>
                     </div>
